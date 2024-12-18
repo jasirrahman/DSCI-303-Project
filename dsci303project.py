@@ -530,36 +530,3 @@ print(est2.summary(xname = xname, yname = yname))
 
 #y_pred_original = np.power(([INSERT COEFFICIENT] * lambda_) + 1, 1 / lambda_) if lambda_ != 0 else np.exp([INSERT COEFFICIENT])
 #print(f"Predictions in original scale: {y_pred_original}")
-
-"""## Non-Hispanic vs. Hispanic Surnames
-
-Below code is unfinished and not currently included; experimenting to see if we can differentiate between non-hispanic and hispanic surnames among white defendants
-"""
-
-#name analysis for white names and UNKNOWNS
-#load necessary packages
-#!pip install surgeo
-#import surgeo
-
-# instantiate the model
-#fsg = surgeo.BIFSGModel()
-
-# bail = bail.dropna(subset=['defZIP'])
-
-# set default geo_race value to same as def-race
-#bail['geo_race'] = bail['defRace']
-
-#iterate through rows w/ WHITE or UNKNOWN as race to update to correct classification
-#for index, row in bail.iterrows():
-#  if row['geo_race'] == 'UNKNOWN' or row['geo_race'] == 'WHITE':
-#    first_name = pd.Series(row['firstName'])
-#    last_name = pd.Series(row['lastName'])
-#    zip_code = pd.Series(row['defZIP'])
-    # get results (in form of pd.Dataframe)
-#    fsg_results = fsg.get_probabilities(first_name, last_name, zip_code)
-    # isolate racial categories
-#    racial_categories = fsg_results[["white", "black", "api", "native", "multiple", "hispanic"]]
-    # index highest probability columns
-#    most_likely_race = racial_categories.idxmax(axis=1).iloc[0]
-    # add race to geo_race
-#    bail.at[index, 'geo_race'] = most_likely_race
